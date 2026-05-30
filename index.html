@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reading the ZIP Code — Two Opinions</title>
-  <meta name="description" content="Two opposing opinions about using ZIP codes to make predictions about people. No side is taken — both get equal attention." />
+  <title>Reading the ZIP Code, Two Opinions</title>
+  <meta name="description" content="Two opposing opinions about using ZIP codes to make predictions about people. No side is taken. Both get equal attention." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -20,92 +20,221 @@
       a prediction about <em>you</em>. Some people think that is clever and fair. Others think it is
       a polite form of discrimination.
     </p>
-    <p class="instructions">Below are two honest opinions. Tap a card to hear the rest of each argument. We don't take a side &mdash; you decide.</p>
+    <p class="instructions">Below are four honest voices, two on each side. Tap a card to hear the rest of each argument. We do not take a side. You decide.</p>
     <div class="scroll-cue" aria-hidden="true">&#8595;</div>
   </header>
 
   <main>
-    <section class="arena" aria-label="Two opposing opinions">
-      <article class="card-slot">
+    <section class="arena" aria-label="Two opposing opinions, two voices each">
+      <div class="side side-for">
         <div class="stance-label stance-for">In favour</div>
+
         <div class="flip-card" tabindex="0" role="button" aria-pressed="false"
-             aria-label="Opinion in favour of using ZIP codes. Activate to read more.">
+             aria-label="Opinion in favour, a risk analyst. Activate to read more.">
           <div class="flip-inner">
             <div class="flip-face flip-front front-for">
               <div class="quote-mark">&ldquo;</div>
               <h2>&ldquo;It's just good information.&rdquo;</h2>
               <p class="speaker">Maya &middot; risk analyst</p>
               <p class="teaser">
-                A ZIP code isn't a slur, it's a fact. Where things happen helps us
-                predict what will happen next &mdash; and that helps everyone.
+                A ZIP code is not a slur, it is a fact. Where things happen helps us
+                predict what will happen next, and that helps everyone.
               </p>
               <span class="flip-hint">Read the full case &rarr;</span>
             </div>
             <div class="flip-face flip-back back-for">
-              <h3>The case <em>for</em> ZIP-code predictions</h3>
+              <h3>The case <em>for</em> ZIP code predictions</h3>
               <ul>
                 <li><strong>Geography really does carry signal.</strong> Flood risk, theft rates and repair costs differ street by street. Ignoring that just makes products more expensive for everyone.</li>
-                <li><strong>It's not about who you are.</strong> The model never sees your race or your name &mdash; only an area average. That's far less personal than reading your private messages.</li>
-                <li><strong>It keeps prices fair to the careful.</strong> Without local data, low-risk people quietly subsidise high-risk ones. Pricing by place rewards reality.</li>
-                <li><strong>It can direct help, not just costs.</strong> The same maps that price insurance also flag neighbourhoods that need clinics, transit, or disaster aid first.</li>
+                <li><strong>It is not about who you are.</strong> The model never sees your race or your name, only an area average. That is far less personal than reading your private messages.</li>
+                <li><strong>It keeps prices fair to the careful.</strong> Without local data, low risk people quietly subsidise high risk ones. Pricing by place rewards reality.</li>
+                <li><strong>It can direct help, not just costs.</strong> The same maps that price insurance also flag neighbourhoods that need clinics, transit or disaster aid first.</li>
               </ul>
-              <p class="bottom-line">Bottom line: <em>data about places is honest, useful, and already everywhere &mdash; banning it doesn't make the risk disappear.</em></p>
+              <p class="bottom-line">Bottom line: <em>data about places is honest, useful and already everywhere. Banning it does not make the risk disappear.</em></p>
               <span class="flip-hint">&larr; Flip back</span>
             </div>
           </div>
         </div>
-      </article>
+
+        <div class="flip-card" tabindex="0" role="button" aria-pressed="false"
+             aria-label="Opinion in favour, a public health planner. Activate to read more.">
+          <div class="flip-inner">
+            <div class="flip-face flip-front front-for">
+              <div class="quote-mark">&ldquo;</div>
+              <h2>&ldquo;The map is how help finds people.&rdquo;</h2>
+              <p class="speaker">Priya &middot; public health planner</p>
+              <p class="teaser">
+                When I want to know which streets need a clinic or clean water first,
+                the postal area is the fastest honest signal I have.
+              </p>
+              <span class="flip-hint">Read the full case &rarr;</span>
+            </div>
+            <div class="flip-face flip-back back-for">
+              <h3>The case <em>for</em> using area data in public services</h3>
+              <ul>
+                <li><strong>Limited budgets have to land somewhere.</strong> Area level need tells me where a mobile clinic or a cooling centre will save the most lives this summer.</li>
+                <li><strong>It catches problems people do not report.</strong> Neighbourhood data flags lead pipes or asthma clusters long before individual complaints arrive.</li>
+                <li><strong>It is faster than knocking on every door.</strong> In a flood or a heatwave, waiting for perfect individual data costs hours we do not have.</li>
+                <li><strong>Used openly, it can shrink gaps.</strong> The same numbers that some people fear can be pointed at fixing the very inequality critics worry about.</li>
+              </ul>
+              <p class="bottom-line">Bottom line: <em>refusing to look at where need is concentrated does not make the need fairer, it just makes it slower to reach.</em></p>
+              <span class="flip-hint">&larr; Flip back</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="versus" aria-hidden="true"><span>vs</span></div>
 
-      <article class="card-slot">
+      <div class="side side-against">
         <div class="stance-label stance-against">Against</div>
+
         <div class="flip-card" tabindex="0" role="button" aria-pressed="false"
-             aria-label="Opinion against using ZIP codes. Activate to read more.">
+             aria-label="Opinion against, a small business owner. Activate to read more.">
           <div class="flip-inner">
             <div class="flip-face flip-front front-against">
               <div class="quote-mark">&ldquo;</div>
               <h2>&ldquo;You're judging my neighbours, not me.&rdquo;</h2>
-              <p class="speaker">Darnell &middot; small-business owner</p>
+              <p class="speaker">Darnell &middot; small business owner</p>
               <p class="teaser">
                 Five digits can decide my loan rate before anyone reads my name.
-                A ZIP code is often just a stand-in for race and income.
+                A ZIP code is often just a stand in for race and income.
               </p>
               <span class="flip-hint">Read the full case &rarr;</span>
             </div>
             <div class="flip-face flip-back back-against">
-              <h3>The case <em>against</em> ZIP-code predictions</h3>
+              <h3>The case <em>against</em> ZIP code predictions</h3>
               <ul>
-                <li><strong>It's a proxy for things we banned.</strong> In many places ZIP codes track race and wealth almost perfectly. Using them can recreate redlining while staying technically &ldquo;neutral.&rdquo;</li>
-                <li><strong>You're punished for your neighbours.</strong> A careful person on a &ldquo;bad&rdquo; street pays more for the behaviour of strangers they never met.</li>
-                <li><strong>It locks inequality in place.</strong> Higher prices and worse offers make a struggling area struggle more &mdash; the prediction becomes a self-fulfilling prophecy.</li>
-                <li><strong>You can't argue with it.</strong> The model is invisible and you never consented. There's no desk to appeal to when an average overrides your real record.</li>
+                <li><strong>It is a proxy for things we banned.</strong> In many places ZIP codes track race and wealth almost perfectly. Using them can recreate redlining while staying technically neutral.</li>
+                <li><strong>You are punished for your neighbours.</strong> A careful person on a struggling street pays more for the behaviour of strangers they never met.</li>
+                <li><strong>It locks inequality in place.</strong> Higher prices and worse offers make a struggling area struggle more. The prediction becomes a self fulfilling prophecy.</li>
+                <li><strong>You cannot argue with it.</strong> The model is invisible and you never agreed to it. There is no desk to appeal to when an average overrides your real record.</li>
               </ul>
-              <p class="bottom-line">Bottom line: <em>a fact about a place becomes a verdict about a person &mdash; and the people it hurts rarely chose where they could afford to live.</em></p>
+              <p class="bottom-line">Bottom line: <em>a fact about a place becomes a verdict about a person, and the people it hurts rarely chose where they could afford to live.</em></p>
               <span class="flip-hint">&larr; Flip back</span>
             </div>
           </div>
         </div>
-      </article>
+
+        <div class="flip-card" tabindex="0" role="button" aria-pressed="false"
+             aria-label="Opinion against, a civil rights lawyer. Activate to read more.">
+          <div class="flip-inner">
+            <div class="flip-face flip-front front-against">
+              <div class="quote-mark">&ldquo;</div>
+              <h2>&ldquo;It launders an illegal choice.&rdquo;</h2>
+              <p class="speaker">Lena &middot; civil rights lawyer</p>
+              <p class="teaser">
+                You are not allowed to price by race. So some firms price by
+                postcode instead and reach almost the same result.
+              </p>
+              <span class="flip-hint">Read the full case &rarr;</span>
+            </div>
+            <div class="flip-face flip-back back-against">
+              <h3>The case <em>against</em> geography as a shortcut</h3>
+              <ul>
+                <li><strong>Neutral inputs can hide banned ones.</strong> A postcode can carry race and religion so closely that the model discriminates without ever naming it.</li>
+                <li><strong>Harm without intent is still harm.</strong> A company can mean well and still deny a generation of one neighbourhood the loans that build wealth.</li>
+                <li><strong>It is almost impossible to challenge.</strong> People cannot see the model, cannot see the data and rarely learn that geography is why they were refused.</li>
+                <li><strong>It freezes history in code.</strong> Maps drawn by past prejudice get fed into tomorrow's decisions, passing old unfairness forward as maths.</li>
+              </ul>
+              <p class="bottom-line">Bottom line: <em>if an input reaches the same result as a banned one, calling it neutral does not make it fair.</em></p>
+              <span class="flip-hint">&larr; Flip back</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="examples">
+      <h2>The same five digits, four real places it shows up</h2>
+      <p class="section-lede">Each of these is happening now. For every one, there is a genuine upside and a genuine harm. We lay them side by side so you can weigh them yourself.</p>
+
+      <div class="case">
+        <h3>Insurance priced by area</h3>
+        <p class="case-note">Car and home cover is often quoted from your postcode before anything else is known about you.</p>
+        <div class="case-cols">
+          <div class="case-cell up"><span class="tag">The upside</span><p>Local theft, flood and repair costs are real. Pricing them keeps cover affordable for careful, low risk areas.</p></div>
+          <div class="case-cell down"><span class="tag">The harm</span><p>A safe driver on a high claim street pays for strangers. The bill follows the postcode, not the person.</p></div>
+        </div>
+      </div>
+
+      <div class="case">
+        <h3>Mortgages and lending</h3>
+        <p class="case-note">Lenders have long used neighbourhood data to judge who gets a loan and at what rate.</p>
+        <div class="case-cols">
+          <div class="case-cell up"><span class="tag">The upside</span><p>Past repayment patterns in an area carry genuine information about risk that lenders price in.</p></div>
+          <div class="case-cell down"><span class="tag">The harm</span><p>This is the root of redlining. Whole neighbourhoods, mostly of one race, were locked out of buying homes for decades.</p></div>
+        </div>
+      </div>
+
+      <div class="case">
+        <h3>Online offers and ads</h3>
+        <p class="case-note">Shops and platforms tune prices, deals and stock to the area you are browsing from.</p>
+        <div class="case-cols">
+          <div class="case-cell up"><span class="tag">The upside</span><p>You see local stock, nearby pickup and offers that actually apply where you live.</p></div>
+          <div class="case-cell down"><span class="tag">The harm</span><p>Poorer postcodes can be quietly shown worse prices and fewer good offers, paying more for the same thing.</p></div>
+        </div>
+      </div>
+
+      <div class="case">
+        <h3>Emergency and public health</h3>
+        <p class="case-note">Cities use area data to decide where clinics, aid and warnings go first.</p>
+        <div class="case-cols">
+          <div class="case-cell up"><span class="tag">The upside</span><p>Help reaches the streets that need it fastest in a flood, a heatwave or an outbreak.</p></div>
+          <div class="case-cell down"><span class="tag">The harm</span><p>A risky area label can stick. It can stigmatise residents and shape how outsiders treat a whole community.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="data" aria-label="How much a postcode tends to reveal">
+      <h2>How much does a postcode really tell you?</h2>
+      <p class="section-lede">These bars show the general pattern researchers describe, not exact measurements. The point is simple. The same postcode can be a strong honest signal and a hidden proxy at the very same time.</p>
+
+      <div class="bars">
+        <div class="bar-row" data-width="88">
+          <div class="bar-head"><span class="bar-label">Local physical risk, like flood, theft and fire</span><span class="bar-val">very strong</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+          <div class="bar-notes"><span class="note-for">Genuinely predictive. These really do vary street by street.</span><span class="note-against">Still averages you in with neighbours you cannot control.</span></div>
+        </div>
+
+        <div class="bar-row" data-width="80">
+          <div class="bar-head"><span class="bar-label">Household income</span><span class="bar-val">strong</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+          <div class="bar-notes"><span class="note-for">Useful for judging ability to pay.</span><span class="note-against">Edges close to charging people for being poor.</span></div>
+        </div>
+
+        <div class="bar-row" data-width="74">
+          <div class="bar-head"><span class="bar-label">Race and ethnicity</span><span class="bar-val">often strong</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+          <div class="bar-notes"><span class="note-for">Never used on purpose by responsible firms.</span><span class="note-against">Tracks postcode so closely it can sneak in uninvited.</span></div>
+        </div>
+
+        <div class="bar-row" data-width="30">
+          <div class="bar-head"><span class="bar-label">Your own individual behaviour</span><span class="bar-val">weak</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+          <div class="bar-notes"><span class="note-for">Where individual data exists, firms say they prefer it.</span><span class="note-against">Yet the postcode often overrides it anyway.</span></div>
+        </div>
+      </div>
+      <p class="data-caption">Bar lengths are illustrative of the pattern, not figures to quote.</p>
     </section>
 
     <section class="common-ground">
       <h2>Where both sides actually agree</h2>
       <div class="agree-grid">
-        <div class="agree-item"><span>1</span><p>Geographic data is powerful &mdash; the disagreement is about what that power does to people.</p></div>
-        <div class="agree-item"><span>2</span><p>Most of this happens invisibly, with no opt-in and little explanation.</p></div>
+        <div class="agree-item"><span>1</span><p>Geographic data is powerful. The disagreement is about what that power does to people.</p></div>
+        <div class="agree-item"><span>2</span><p>Most of this happens invisibly, with no opt in and little explanation.</p></div>
         <div class="agree-item"><span>3</span><p>The same five digits can fund a clinic or deny a loan. Intent and oversight decide which.</p></div>
       </div>
     </section>
 
     <section class="you">
-      <h2>So &mdash; what do <em>you</em> think?</h2>
-      <p>Both opinions above are held by real, reasonable people. This page deliberately gives them equal room and reaches no verdict. The conclusion is yours to write.</p>
+      <h2>So, what do <em>you</em> think?</h2>
+      <p>Every opinion above is held by real, reasonable people. This page gives them equal room and reaches no verdict. The conclusion is yours to write.</p>
       <div class="meter" role="group" aria-label="Cast your own opinion">
         <button class="meter-btn meter-for" data-vote="for">It's good information</button>
         <button class="meter-btn meter-against" data-vote="against">It's unfair by proxy</button>
       </div>
-      <p class="meter-note" id="meter-note" aria-live="polite">Pick the one you lean toward &mdash; nothing is sent anywhere, it's just to make you choose.</p>
+      <p class="meter-note" id="meter-note" aria-live="polite">Pick the one you lean toward. Nothing is sent anywhere, it is just to make you choose.</p>
     </section>
   </main>
 
