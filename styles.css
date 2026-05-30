@@ -1,0 +1,391 @@
+:root {
+  --for: #1f7a5a;
+  --for-soft: #e3f3ec;
+  --for-ink: #0c3a2a;
+  --against: #b23a48;
+  --against-soft: #fae6e8;
+  --against-ink: #5a1620;
+  --ink: #1a1a1f;
+  --paper: #f6f4ef;
+  --card: #ffffff;
+  --muted: #6b6b73;
+  --radius: 18px;
+  --shadow: 0 18px 40px -18px rgba(20, 20, 30, 0.35);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: clamp(3rem, 9vw, 7rem) 1.5rem 2rem;
+  text-align: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin: 0 0 1.2rem;
+}
+
+.hero h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: clamp(2.6rem, 9vw, 5rem);
+  line-height: 1.02;
+  margin: 0 0 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.digits {
+  display: inline-block;
+  font-size: 0.42em;
+  letter-spacing: 0.35em;
+  font-weight: 600;
+  color: var(--muted);
+  background: linear-gradient(90deg, var(--for), var(--against));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0.3em 0;
+}
+
+.lede {
+  font-size: clamp(1.05rem, 2.4vw, 1.3rem);
+  max-width: 60ch;
+  margin: 0 auto 1.4rem;
+  color: #34343c;
+}
+
+.lede em { font-style: italic; }
+
+.instructions {
+  font-size: 0.95rem;
+  color: var(--muted);
+  max-width: 52ch;
+  margin: 0 auto;
+}
+
+.scroll-cue {
+  margin-top: 2.5rem;
+  font-size: 1.4rem;
+  color: var(--muted);
+  animation: bob 1.8s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(8px); opacity: 1; }
+}
+
+/* ---------- ARENA ---------- */
+.arena {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1080px;
+  margin: 1rem auto 0;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.card-slot {
+  flex: 1 1 380px;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.stance-label {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+}
+
+.stance-for { background: var(--for-soft); color: var(--for-ink); }
+.stance-against { background: var(--against-soft); color: var(--against-ink); }
+
+/* ---------- FLIP CARD ---------- */
+.flip-card {
+  flex: 1;
+  perspective: 1600px;
+  min-height: 460px;
+  cursor: pointer;
+  outline: none;
+}
+
+.flip-card:focus-visible .flip-inner {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px var(--ink);
+  border-radius: var(--radius);
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 460px;
+  transition: transform 0.7s cubic-bezier(0.4, 0.1, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-card.is-flipped .flip-inner { transform: rotateY(180deg); }
+
+.flip-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.flip-front { background: var(--card); justify-content: center; }
+.flip-back { transform: rotateY(180deg); }
+
+.front-for { border-top: 6px solid var(--for); }
+.front-against { border-top: 6px solid var(--against); }
+.back-for { background: var(--for-soft); border-top: 6px solid var(--for); color: var(--for-ink); }
+.back-against { background: var(--against-soft); border-top: 6px solid var(--against); color: var(--against-ink); }
+
+.quote-mark {
+  font-family: "Fraunces", serif;
+  font-size: 4rem;
+  line-height: 0.6;
+  margin-bottom: 0.5rem;
+}
+.front-for .quote-mark { color: var(--for); }
+.front-against .quote-mark { color: var(--against); }
+
+.flip-front h2 {
+  font-family: "Fraunces", serif;
+  font-size: clamp(1.5rem, 3.6vw, 2rem);
+  line-height: 1.15;
+  margin: 0 0 0.6rem;
+}
+
+.speaker {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin: 0 0 1.1rem;
+  text-transform: uppercase;
+}
+
+.teaser { font-size: 1.05rem; margin: 0 0 1.6rem; }
+
+.flip-hint {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  opacity: 0.75;
+  margin-top: auto;
+}
+
+.flip-back h3 {
+  font-family: "Fraunces", serif;
+  font-size: 1.35rem;
+  margin: 0 0 1rem;
+}
+
+.flip-back ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.flip-back li {
+  font-size: 0.92rem;
+  padding-left: 1.3rem;
+  position: relative;
+}
+
+.flip-back li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+.back-for li::before { background: var(--for); }
+.back-against li::before { background: var(--against); }
+
+.bottom-line {
+  font-size: 0.92rem;
+  padding-top: 0.8rem;
+  border-top: 1px dashed currentColor;
+  margin: 0.4rem 0 1rem;
+}
+
+/* ---------- VERSUS ---------- */
+.versus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  flex: 0 0 auto;
+}
+
+.versus span {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--muted);
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #d9d6cd;
+  border-radius: 50%;
+  background: var(--paper);
+}
+
+/* ---------- COMMON GROUND ---------- */
+.common-ground {
+  max-width: 920px;
+  margin: 1rem auto;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.common-ground h2,
+.you h2 {
+  font-family: "Fraunces", serif;
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  margin: 0 0 2rem;
+}
+
+.agree-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+.agree-item {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1.6rem 1.4rem;
+  box-shadow: 0 10px 26px -18px rgba(20, 20, 30, 0.4);
+  text-align: left;
+}
+
+.agree-item span {
+  font-family: "Fraunces", serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--for), var(--against));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.agree-item p { margin: 0; font-size: 0.95rem; }
+
+/* ---------- YOU ---------- */
+.you {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  text-align: center;
+}
+
+.you p { color: #34343c; max-width: 56ch; margin: 0 auto 2rem; }
+
+.meter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.meter-btn {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.9rem 1.6rem;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.meter-for {
+  background: var(--for-soft);
+  color: var(--for-ink);
+  border-color: var(--for);
+}
+.meter-against {
+  background: var(--against-soft);
+  color: var(--against-ink);
+  border-color: var(--against);
+}
+
+.meter-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.meter-btn.chosen { transform: translateY(-1px); }
+.meter-for.chosen { background: var(--for); color: #fff; }
+.meter-against.chosen { background: var(--against); color: #fff; }
+
+.meter-note {
+  margin-top: 1.6rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+  min-height: 1.5em;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  border-top: 1px solid #e4e1d8;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  max-width: 50ch;
+  margin: 0 auto;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 760px) {
+  .versus { transform: rotate(90deg); margin: 0.2rem 0; }
+  .flip-card, .flip-inner { min-height: 500px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue { animation: none; }
+  .flip-inner { transition: none; }
+  html { scroll-behavior: auto; }
+}
